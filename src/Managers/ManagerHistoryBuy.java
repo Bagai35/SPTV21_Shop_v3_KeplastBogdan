@@ -22,11 +22,10 @@ public class ManagerHistoryBuy {
     public void BuyProduct(Product[] products, Buyer[] buyers) {
         System.out.println("Список покупателей: ");
         for (int i = 0; i < buyers.length; i++) {
-            System.out.printf("%d. %s %s. номер телефона: %s%n"
-                    , i + 1
-                    , buyers[i].getFirstname()
-                    , buyers[i].getLastname()
-                    , buyers[i].getPhone());
+            System.out.println(i + 1);
+            System.out.println(buyers[i].getFirstname());
+            System.out.println(buyers[i].getLastname());
+            System.out.println("номер телефона"+buyers[i].getPhone());
         }
         System.out.print("Номер покупателя: ");
         Buyer = scanner.nextInt(); scanner.nextLine();

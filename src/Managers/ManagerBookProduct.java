@@ -33,43 +33,42 @@ public class ManagerBookProduct {
 
     public void printListBookProduct(Product[] products) {
         for (int i = 0; i < products.length; i++) {
-            System.out.printf("%d. Название продукта: %s Количество: %s Цена продукта: %s%n"
-                    , i + 1
-                    , products[i].getTitle()
-                    , products[i].getQuantity()
-                    , products[i].getPrice());
+            System.out.print("."+i + 1);
+            System.out.print("Название продукта"+products[i].getTitle());
+            System.out.print("Количество"+products[i].getQuantity());
+            System.out.print("Цена продукта"+products[i].getPrice());
         }
         System.out.println();
     }
 
     public void ProductChange(Product[] products) {
         printListBookProduct(products);
-        System.out.print("Выберите номер продукта для редактирования: ");
+        System.out.print("Выберите номер продукта: ");
         int ProductNumberValues = scanner.nextInt();
         scanner.nextLine();
-        System.out.print("Наименование продукта: ");
+        System.out.print("Название продукта: ");
         System.out.println(products[ProductNumberValues - 1].getTitle());
-        System.out.print("Изменить название продукта ? (да/нет)");
+        System.out.print("Изменить название? (да/нет)");
         String edit = scanner.nextLine();
         if (edit.equals("да")) {
-            System.out.print("Введите новое название продукта: ");
+            System.out.print("Введите новое название: ");
             products[ProductNumberValues - 1].setTitle(scanner.nextLine());
         }
-        System.out.print("Изменить цену продукта: ");
+        System.out.print("Изменить цену: ");
         System.out.println(products[ProductNumberValues - 1].getPrice());
-        System.out.print("Изменить цену продукта? (да/нет)");
+        System.out.print("Изменить цену? (да/нет)");
         edit = scanner.nextLine();
         if (edit.equals("да")) {
-            System.out.print("Введите новое цену продукта: ");
+            System.out.print("Введите новое цену: ");
             products[ProductNumberValues - 1].setPrice(scanner.nextInt());
             scanner.nextLine();
         }
         System.out.print("Количество товара: ");
         System.out.println(products[ProductNumberValues - 1].getQuantity());
-        System.out.print("Изменить количество данного товара на складе? (да/нет)");
+        System.out.print("Изменить количество? (да/нет)");
         edit = scanner.nextLine();
         if (edit.equals("да")) {
-            System.out.print("Введите другое количество книги: ");
+            System.out.print("Введите количество: ");
             products[ProductNumberValues - 1].setQuantity(scanner.nextInt());
             scanner.nextLine();
         }

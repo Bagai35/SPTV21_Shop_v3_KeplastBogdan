@@ -19,9 +19,8 @@ public class MarketManagers {
 
     public void MarketCashList(Market[] Markets) {
         for (int i = 0; i < Markets.length; i++) {
-            System.out.printf("%d. Прибыль магазина c покупателя: %s%n"
-                    , i + 1
-                    , Markets[i].getCashMarket());
+            System.out.println(i + 1);
+            System.out.print("Прибыль магазина c покупателя:"+Markets[i].getCashMarket());
         }
         int sum = 0;
         for (Market market : Markets) {
