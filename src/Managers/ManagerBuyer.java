@@ -30,6 +30,20 @@ public class ManagerBuyer {
         buyer.setPhone(scanner.nextLine());
         return buyer;
     }
+
+    public void PrintCash(Buyer[] buyers){
+        System.out.println("список покупателей");
+        for (int i = 0; i < buyers.length; i++) {
+            System.out.println(i + 1);
+            System.out.println(buyers[i].getFirstname());
+            System.out.println(buyers[i].getLastname());
+            System.out.println("номер телефона"+buyers[i].getPhone());
+        }
+        System.out.print("Введите ид покупателя и посмотрите кэш: ");
+        int balans = scanner.nextInt(); scanner.nextLine();
+        int printCash = buyers[balans-1].getCash();
+        System.out.println("Баланс покупателя: " + printCash);
+    }
     public void Refill(Buyer[] buyers) {
         System.out.println("Выберите покупателя для записи балланса");
         System.out.println("список покупателей");
@@ -48,18 +62,5 @@ public class ManagerBuyer {
         System.out.println("Счет пополнен!");
         System.out.println("На счету : " + buyers[buyer - 1].getCash());
 
-    }
-    public void PrintCash(Buyer[] buyers){
-        System.out.println("список покупателей");
-        for (int i = 0; i < buyers.length; i++) {
-            System.out.println(i + 1);
-            System.out.println(buyers[i].getFirstname());
-            System.out.println(buyers[i].getLastname());
-            System.out.println("номер телефона"+buyers[i].getPhone());
-        }
-        System.out.print("Введите ид покупателя и посмотрите кэш: ");
-        int balans = scanner.nextInt(); scanner.nextLine();
-        int printCash = buyers[balans-1].getCash();
-        System.out.println("Баланс покупателя: " + printCash);
     }
 }

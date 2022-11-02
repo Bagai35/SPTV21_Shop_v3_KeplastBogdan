@@ -4,16 +4,15 @@ package Managers;
 import Entity.Market;
 
 public class MarketManagers {
+    public Market MarketCashEveryTime(int SummaProduct){
+        Market Market = new Market();
+        Market.setCashMarket(SummaProduct);
+        return Market;
+    }
 
     public Market createMarketList() {
         int SummaProduct = ManagerHistoryBuy.TotalSumma;
         Market Market = MarketCashEveryTime(SummaProduct);
-        return Market;
-    }
-
-    public Market MarketCashEveryTime(int SummaProduct){
-        Market Market = new Market();
-        Market.setCashMarket(SummaProduct);
         return Market;
     }
 

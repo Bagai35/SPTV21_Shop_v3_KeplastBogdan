@@ -18,7 +18,20 @@ public class ManagerHistoryBuy {
     public ManagerHistoryBuy() {
         scanner = new Scanner(System.in);
     }
+    public HistoryBuy createStoryList(Product[] products, Buyer[] buyers) throws IOException {
 
+        String historyProduct = String.valueOf(products[Product-1].getTitle());
+
+        HistoryBuy historyBuy = new HistoryBuy();
+        historyBuy.setHistoryProductName(historyProduct);
+        historyBuy.setHistoryProductPrice(String.valueOf(TotalSumma));
+        historyBuy.setHistoryProductQantity(String.valueOf(QuantityProduct_final));
+        historyBuy.setBuyer(buyers[Buyer - 1]);
+        historyBuy.setBuyOnProduct(new GregorianCalendar().getTime());
+
+
+        return historyBuy;
+    }
     public void BuyProduct(Product[] products, Buyer[] buyers) {
         System.out.println("Список покупателей: ");
         for (int i = 0; i < buyers.length; i++) {
@@ -76,19 +89,6 @@ public class ManagerHistoryBuy {
         System.out.println();
     }
 
-    public HistoryBuy createStoryList(Product[] products, Buyer[] buyers) throws IOException {
 
-        String historyProduct = String.valueOf(products[Product-1].getTitle());
-
-        HistoryBuy historyBuy = new HistoryBuy();
-        historyBuy.setHistoryProductName(historyProduct);
-        historyBuy.setHistoryProductPrice(String.valueOf(TotalSumma));
-        historyBuy.setHistoryProductQantity(String.valueOf(QuantityProduct_final));
-        historyBuy.setBuyer(buyers[Buyer - 1]);
-        historyBuy.setBuyOnProduct(new GregorianCalendar().getTime());
-
-
-        return historyBuy;
-    }
 
 }
