@@ -69,53 +69,54 @@ public class App {
             int task = scanner.nextInt();
             scanner.nextLine();
             switch (task) {
-                case 0 -> repeat = false;
-                case 1 -> {
+                case 0 : repeat = false;
+                case 1 :
                     System.out.println("1. Добавить продукт");
                     addProduct(managerBookProduct.createBookProduct());
-                }
-                case 2 -> {
+                    break;
+
+                case 2 :
                     System.out.println("2. Добавить покупателя");
                     addBuyer(managerBuyer.newBuyer());
-                }
-                case 3 -> {
+                    break;
+                case 3 :
                     System.out.println("3. Список продуктов");
                     managerBookProduct.printListBookProduct(products);
-                }
-                case 4 -> {
+                    break;
+                case 4 :
                     System.out.println("4. Список покупателей");
                     managerBuyer.printListBuyer(buyers);
-                }
-                case 5 -> {
+                    break;
+                case 5 :
                     System.out.println("5. Купить товар");
                     managerHistoryBuy.BuyProduct(products, buyers);
                     addCashMarket(marketManagers.createMarketList());
                     addHistoryMarket(managerHistoryBuy.createStoryList(products, buyers));
-                }
-                case 6 -> {
+                    break;
+                case 6 :
                     System.out.println("6. История покупок в магазине");
                     managerHistoryBuy.printListBuys(historyBuys);
-                }
-                case 7 -> {
+                    break;
+                case 7 :
                     System.out.println("7. Пополнить счет");
                     managerBuyer.Refill(buyers);
-                }
-                case 8 -> {
+                    break;
+                case 8 :
                     System.out.println("8. Посмотреть баланс");
                     managerBuyer.PrintCash(buyers);
-                }
-                case 9 -> {
+                    break;
+                case 9 :
                     System.out.println("9. Изменить данные о товаре");
                     managerBookProduct.ProductChange(products);
-                }
-                case 10 -> {
+                    break;
+                case 10 :
                     System.out.println("10. Удаление продукта");
                     bookProduct.removeProduct();
-                }
-                case 11 -> {
+                    break;
+                case 11 :
                     System.out.println("11. Прибыль магазина");
                     marketManagers.MarketCashList(markets);
-                }
+                    break;
             }
 
 
