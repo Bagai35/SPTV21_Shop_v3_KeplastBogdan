@@ -4,22 +4,18 @@ package managers;
 import entity.Market;
 
 public class MarketManagers {
-    public Market MarketCashEveryTime(int SummaProduct){
+    public Market marketCashEveryTime(int summaProduct){
         Market market = new Market();
-        market.setCashMarket(SummaProduct);
+        market.setCashMarket(summaProduct);
         return market;
     }
 
     public Market createMarketList() {
-        int SummaProduct = ManagerHistoryBuy.TotalSumma;
-        return MarketCashEveryTime(SummaProduct);
+        int summaProduct = ManagerHistoryBuy.totalSumma;
+        return marketCashEveryTime(summaProduct);
     }
 
-    public void MarketCashList(Market[] markets) {
-        for (int i = 0; i < markets.length; i++) {
-            System.out.println(i + 1);
-            System.out.print("Прибыль магазина c покупателя:"+markets[i].getCashMarket());
-        }
+    public void marketCashList(Market[] markets) {
         int sum = 0;
         for (Market market : markets) {
             sum = sum + market.getCashMarket();

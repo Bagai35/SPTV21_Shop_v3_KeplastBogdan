@@ -43,7 +43,7 @@ public class App {
         managerHistoryBuy = new ManagerHistoryBuy();
         bookProduct = new BookProduct();
         marketManagers = new MarketManagers();
-        Market[] market = new Market[0];
+        markets = new Market[0];
     }
 
     public void run() throws IOException {
@@ -57,7 +57,7 @@ public class App {
             System.out.println("2 - добавить покупателя");
             System.out.println("3 - Список продуктов");
             System.out.println("4 - Список покупателей");
-            System.out.println("5 - Выдать товар");
+            System.out.println("5 - Купить товар");
             System.out.println("6 - История покупок");
             System.out.println("7 - Добавить денег покупателю");
             System.out.println("8 - Посмотреть баланс");
@@ -89,7 +89,7 @@ public class App {
                     break;
                 case 5 :
                     System.out.println("5. Купить товар");
-                    managerHistoryBuy.BuyProduct(products, buyers);
+                    managerHistoryBuy.buyProduct(products, buyers);
                     addCashMarket(marketManagers.createMarketList());
                     addHistoryMarket(managerHistoryBuy.createStoryList(products, buyers));
                     break;
@@ -115,7 +115,7 @@ public class App {
                     break;
                 case 11 :
                     System.out.println("11. Прибыль магазина");
-                    marketManagers.MarketCashList(markets);
+                    marketManagers.marketCashList(markets);
                     break;
             }
 
