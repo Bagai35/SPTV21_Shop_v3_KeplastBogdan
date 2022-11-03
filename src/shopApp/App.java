@@ -1,14 +1,14 @@
-package ShopApp;
+package shopApp;
 
-import Entity.BookProduct;
-import Entity.Buyer;
-import Entity.HistoryBuy;
-import Entity.Product;
-import Entity.Market;
-import Managers.ManagerBookProduct;
-import Managers.ManagerBuyer;
-import Managers.ManagerHistoryBuy;
-import Managers.MarketManagers;
+import entity.BookProduct;
+import entity.Buyer;
+import entity.HistoryBuy;
+import entity.Product;
+import entity.Market;
+import managers.ManagerBookProduct;
+import managers.ManagerBuyer;
+import managers.ManagerHistoryBuy;
+import managers.MarketManagers;
 
 import java.io.IOException;
 import java.util.Arrays;

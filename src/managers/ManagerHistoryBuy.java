@@ -1,8 +1,8 @@
-package Managers;
+package managers;
 
-import Entity.Buyer;
-import Entity.HistoryBuy;
-import Entity.Product;
+import entity.Buyer;
+import entity.HistoryBuy;
+import entity.Product;
 
 import java.io.IOException;
 import java.util.GregorianCalendar;

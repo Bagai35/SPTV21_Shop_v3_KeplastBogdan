@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 
 public class Market {
@@ -10,17 +10,9 @@ public class Market {
         return cashMarket;
     }
 
-
     public void setCashMarket(int cashMarket) {
         this.cashMarket = cashMarket;
     }
-
-
-
-
-
-
-
     @Override
     public String toString() {
         return "Market{" +

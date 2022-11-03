@@ -1,6 +1,6 @@
-package Managers;
+package managers;
 
-import Entity.Product;
+import entity.Product;
 
 import java.util.Scanner;
 

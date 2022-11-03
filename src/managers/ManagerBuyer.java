@@ -1,6 +1,6 @@
-package Managers;
+package managers;
 
-import Entity.Buyer;
+import entity.Buyer;
 
 import java.util.Scanner;
 
